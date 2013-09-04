@@ -29,35 +29,33 @@
 \author{Antônio Guilherme \textsc{Ferreira Viggiano}}
 %\date{}
 \makeindex
-
 \geometry{paperwidth=210mm,paperheight=297mm,
-top=30mm,bottom=30mm,
-left=30mm,right=30mm}
-% Documento
+  top=30mm,bottom=30mm,
+  left=30mm,right=30mm}
 
 \makeglossaries
-
-\begin{document}
-
-
-\input{title.tex}
-
-%Glossary
 \renewcommand*{\glspostdescription}{. Page:}
 \renewcommand*{\glossaryname}{}
 
+\begin{document}
+
+\input{title.tex}
+
 \pagebreak	
 \tableofcontents
-\input{glossaire.tex}
+\input{entrees-glossaire.tex}
 
 \pagebreak
-\section{Remerciements}
-
 \input{remerciements.tex}
 
 \pagebreak
-\section{Glossaire}
-\printglossary
+\input{resume.tex}
+
+\pagebreak
+\input{mots-clefs.tex}
+
+\pagebreak
+\input{glossaire.tex}
 
 \pagebreak
 \input{bibliographie.tex}

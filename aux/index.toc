@@ -1,0 +1,47 @@
+\boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
+\defcounter {refsection}{0}\relax 
+\select@language {french}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {1}Introduction}{7}{chapter.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {2}Pr\IeC {\'e}sentation de l\IeC {\textquoteright }entreprise}{8}{chapter.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2.1}Historique}{8}{section.2.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2.2}Implantation et Taille}{8}{section.2.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2.3}Type de structure}{8}{section.2.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2.4}Gamme de produits}{9}{section.2.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.4.1}Technologies de l'information}{9}{subsection.2.4.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Audit et conseil}{9}{section*.7}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{D\IeC {\'e}veloppement de syst\IeC {\`e}mes}{9}{section*.8}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Informatique d\IeC {\'e}cisionnelle -- \textit {Business Intelligence}}{10}{section*.9}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Gestion des T.I.}{10}{section*.10}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.4.2}Syst\IeC {\`e}mes Int\IeC {\'e}gr\IeC {\'e}s}{10}{subsection.2.4.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Asert Sant\IeC {\'e}}{10}{section*.11}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Asert M\IeC {\'e}d}{11}{section*.12}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Asert Cycle}{11}{section*.13}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2.5}March\IeC {\'e}}{11}{section.2.5}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.5.1}Le march\IeC {\'e} des technologies de l'information et communication au Br\IeC {\'e}sil}{11}{subsection.2.5.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.5.2}La position de Asert dans le march\IeC {\'e}}{12}{subsection.2.5.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2.6}La situation de l'entreprise}{12}{section.2.6}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {3}Presentation de la mission}{13}{chapter.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {4}Conclusion}{14}{chapter.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {5}Bibliographie}{15}{chapter.5}

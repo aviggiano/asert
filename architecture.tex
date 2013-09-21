@@ -49,7 +49,7 @@ Souvent confondue avec l'architecture trois couches, la MVC se distingue dans le
 
 Dans le système de gestion des adhérents à la société d'assurance des employés de la compagnie énergétique de l'état de Goiás, le système trois couches/MVC est représenté par des classes de Vue, Contrôle, Business et Persistance. D'autres classes de support, telles que les  « Vérificateur », étaient aussi présentes, mais plus pour une question d'organisation que de  style d'architecture.
 
-Comme l'on peut voir, ce style est composé à la fois de classes de Présentation/Vue, de Business/Logique/Modèle, de Données/Persistance et de Contrôle, ce qui assure une gestion de donnés et de développement logiciel plus rigoureux que les deux systèmes séparés : si d'un côté il y a plus d'entités qui détiennent un accès limité aux informations, et donc il faut écrire plus de lignes de code, de l'autre côté cela assure la modularité du programme et la maintenance du code.
+Comme l'on peut voir, ce style est composé à la fois de classes de Présentation/Vue, de Business/Logique/Modèle, de Données/Persistance et de Contrôle, ce qui assure une gestion de donnés et de développement logiciel plus rigoureux que les deux systèmes séparés : si d'un côté il y a plus d'entités qui détiennent un accès limité aux informations, et donc s'il faut écrire plus de lignes de code, de l'autre côté cela assure la modularité du programme et la maintenance du code.
 
 De mode général, ce flux de contrôle se passe de la façon suivante :
 
@@ -64,7 +64,7 @@ De mode général, ce flux de contrôle se passe de la façon suivante :
 \item Une message de confirmation ou d'erreur est transmise dans le flux contraire jusqu'à la Vue et à l'utilisateur.
 \end{enumerate}
 
-La table \ref{flux} représente ce flux de manière schématique avec l'exemple d'un utilisateur qui veut consulter tous les clients de la base de données :
+La table \ref{flux} représente ce flux de manière schématique avec l'exemple d'un utilisateur qui veut consulter tous les clients de la base de données.
 
 \begin{table}[ht]
 \begin{center}

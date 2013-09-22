@@ -1,10 +1,16 @@
 %!TEX root = index.tex
+\pagebreak
 \section{Framework}
 
 En dehors des librairies open source et des outils de développement décrits dans la section 3.1, les projets de l'entreprise étaient développés avec un ensemble cohérent de composants logiciels qui permettaient la réutilisation de code, standardisation du cycle de vie des produits et formalisation de l'architecture logiciel. Cet ensemble a été fait au cours de l'existence de l'entreprise et aujourd'hui compte plus d'un millier de fonctions d'aide au développement agile.
+
+\footnotetext[1]{Généralement dans les systèmes d'information, il n'y a pas de suppression \textit{stricto sensu}, 
+    	car les entrées peuvent être réutilisées ultérieurement. Ce qui est fait est la modification de la valeur indicatrice de suppression : 
+    	dans la suppression d'un client, sa colonne « Date de suppression » est indiqué avec la date du jour, et lorsque l'on veut consulter 
+    	tous les clients non supprimés, il suffit d'ajouter à la requete ``\texttt{WHERE \textit{DATE\_SUPPRESSION} IS NULL}''.} 
 
 Ce framework est utilisé, par example, dans la création de fenêtres graphiques génériques, dans la normalisation de la taille des fenêtres, des couleurs, taille et police des libellés, de la création de boutons qui génèrent toujours le même évènement (p.ex., « Afficher \emph{X}», « Rechercher \emph{Y}»), etc. 
 
 En outre que l'organisation interne, la standardisation des entités a aussi une importance dans la communication avec les frameworks et outils externes, tels que Hibernate, par example. Par moyen d'annotations, il est possible de gérer les instances des classes sans effort de la part du programmeur : toutes les \textit{Vue}s commençaient par la lettre V, les \textit{Contrôleur}s par la lettre C, les \textit{Business} par la lettre B, et les \textit{Persistance}s par la P. Ainsi, Hibernate savait que le contrôleur \underline{Cbanque} était celui qui manipulait la persistance correspondante \underline{Pbanque}.
 
-La création de fenêtres génériques, à son tour, est possible lorsque l'on se rend compte, par example, que le registre de nouvelles professions et le registre de mots interdits sont similaires dans le fait d'avoir un seul champ de texte, leur description. Donc il suffit que le programmeur rattache les \textit{C}, \textit{B} et \textit{P} dans chaque cas avec la \textit{V} pour que la fenêtre soit créé.
+La création de fenêtres génériques, à son tour, est possible lorsque l'on se rend compte, par example, que le registre de nouvelles professions et le registre de mots interdits sont similaires dans le fait d'avoir un seul champ de texte, leur description. Donc il suffit que le programmeur rattache les \textit{C}, \textit{B} et \textit{P} dans chaque cas avec la \textit{V} pour que la fenêtre soit créée.

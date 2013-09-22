@@ -82,7 +82,7 @@ La table \ref{flux} représente ce flux de manière schématique avec l'exemple 
     	Ensuite, il appelle la Persistance pour retrouver l'information correspondante
     	& Business  $\rightarrow$ Persistance \\ \hline
     La persistance utilise des commandes SQL pour consulter la base de données et retrouver les clients indiqués par le Business 
-    	(par example, les clients supprimés ne seront pas affichés). 
+    	(par example, les clients supprimés\footnotemark[1] ne seront pas affichés). 
     	La réponse de cette requête est donc renvoyé dans le flux inversé jusqu'à la Vue. 
     	& Persistance $\rightarrow \cdots \rightarrow$ Vue \\ \hline
     La Vue organise l'information et la rend visible à l'utilisateur, sous forme de table mise en forme 

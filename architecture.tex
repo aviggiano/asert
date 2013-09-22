@@ -45,9 +45,9 @@ L'architecture MVC est un motif d'architecture qui sépare la représentation de
 
 Souvent confondue avec l'architecture trois couches, la MVC se distingue dans le fait que l'architecture 3-tiers sépare la couche métier de la couche d'accès aux données. Pour qu'une application MVC soit une vraie application 3-tiers, il faut lui ajouter une couche d'abstraction d'accès aux données de type \textit{DAO} (Data Access Object). Inversement pour qu'une application 3-Tiers respecte MVC il faut lui ajouter une couche de contrôle entre l'interface utilisateur et les règles métier. Loin d'être antagonistes, ces deux pratiques se combinent et sont la fondation de la plupart des frameworks de création d'applications web \cite{mvc-3-tier}.
 
-\subsection{Cas pratique dans le système de gestion CELGMED}
+\subsection{Cas pratique dans le système de gestion CELGMED}\label{section-flux}
 
-Dans le système de gestion des adhérents à la société d'assurance des employés de la compagnie énergétique de l'état de Goiás, le système trois couches/MVC est représenté par des classes de Vue, Contrôle, Business et Persistance. D'autres classes de support, telles que les  « Vérificateur », étaient aussi présentes, mais plus pour une question d'organisation que de  style d'architecture.
+Dans le système de gestion des adhérents à la société d'assurance des employés de la compagnie énergétique de l'état de Goiás, le système trois couches/MVC est représenté par des classes de Vue, Contrôle, Business et Persistance. D'autres classes de support étaient aussi présentes, mais plus pour une question d'organisation que de  style d'architecture, telles que les  « Vérificateur » (utilisées pour assurer le type des variables, intervalle des données numériques ou des dates, etc.) et les « Entité » (par example, une classe Banque est associé en quelque sorte à une entité Rue, Code Postal, etc.). 
 
 Comme l'on peut voir, ce style est composé à la fois de classes de Présentation/Vue, de Business/Logique/Modèle, de Données/Persistance et de Contrôle, ce qui assure une gestion de donnés et de développement logiciel plus rigoureux que les deux systèmes séparés : si d'un côté il y a plus d'entités qui détiennent un accès limité aux informations, et donc s'il faut écrire plus de lignes de code, de l'autre côté cela assure la modularité du programme et la maintenance du code.
 

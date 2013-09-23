@@ -4,7 +4,7 @@
 
 Un motif architectural est une solution générale, réutilisable à un problème qui se pose souvent dans l'architecture logicielle dans un contexte donné. Modèles architecturaux sont souvent documentées dans les modèles de conception de logiciels. \cite{software-arch} 
 
-Suivant la conception traditionnelle d'architecture, un « style d'architecture logiciel » est une méthode de construction spécifique, caractérisé par les particularités qui le rendent remarquable. Un style architectural définit une famille de systèmes en termes d'un modèle d'organisation structurelle, un vocabulaire de composants et de connecteurs, avec des contraintes sur la façon dont ils peuvent être combinés. Les styles architecturaux sont des « paquets » réutilisables de décisions de conception et des contraintes qui sont appliquées à une architecture d'induire des qualités souhaitables choisis. Il existe de nombreux modèles et de styles architecturaux reconnus, parmi lesquels : à base de composants ; application monolithique ("grande boule de boue") ; en couches ; etc. \cite{software-arch-patterns}
+Suivant la conception traditionnelle d'architecture, un « style d'architecture logiciel » est une méthode de construction spécifique, caractérisé par les particularités qui le rendent remarquable. Un style architectural définit une famille de systèmes en termes d'un modèle d'organisation structurelle, un vocabulaire de composants et de connecteurs, avec des contraintes sur la façon dont ils peuvent être combinés. Les styles architecturaux sont des « paquets » réutilisables de décisions de conception et des contraintes qui sont appliquées à une architecture d'induire des qualités souhaitables choisis. Il existe de nombreux modèles et de styles architecturaux reconnus, parmi lesquels : à base de composants ; application monolithique ; en couches ; etc. \cite{software-arch-patterns}
 
 L'architecture des systèmes développés à Asert est souvent un intermédiaire entre celle en couches et la MVC (modèle-vue-contrôleur).
 
@@ -29,7 +29,7 @@ Dans cette approche, les couches communiquent entre elles au travers d'un « mod
 
 Le rôle de chacune des couches et leur interface de communication étant bien définis, les fonctionnalités de chacune d'entre elles peuvent évoluer sans induire de changement dans les autres couches. Cependant, une nouvelle fonctionnalité de l'application peut avoir des répercussions dans plusieurs d'entre elles. Il est donc essentiel de définir un modèle d'échange assez souple, pour permettre une maintenance aisée de l'application.
 
-Ce modèle d'architecture 3-tiers a pour objectif de répondre aux préoccupations tels que l'allègement du poste de travail client, la prise en compte de l'hétérogénéité des plates-formes (serveurs, clients, langages, etc.), l'amélioration de la sécurité des données, en supprimant le lien entre le client et les données, la rupture du lien de propriété exclusive entre application et données et enfin, meilleure répartition de la charge entre différents serveurs d'application. \cite{3-tiers}
+Ce modèle d'architecture 3-tiers a pour objectif de répondre aux préoccupations tels que l'allègement du poste de travail client, la prise en compte de l'hétérogénéité des plates-formes (serveurs, clients, langages, etc.), l'amélioration de la sécurité des données, en supprimant le lien entre le client et les données, la rupture du lien de propriété exclusive entre application et données et enfin, meilleure répartition de la charge entre différents serveurs d'application \cite{3-tiers}. 
 
 \subsection{L'architecture Modèle-vue-contrôleur (MVC)}
 
@@ -47,9 +47,9 @@ Souvent confondue avec l'architecture trois couches, la MVC se distingue dans le
 
 \subsection{Cas pratique dans le système de gestion CELGMED}\label{section-flux}
 
-Dans le système de gestion des adhérents à la société d'assurance des employés de la compagnie énergétique de l'état de Goiás, le système trois couches/MVC est représenté par des classes de Vue, Contrôle, Business et Persistance. D'autres classes de support étaient aussi présentes, mais plus pour une question d'organisation que de  style d'architecture, telles que les  « Vérificateur » (utilisées pour assurer le type des variables, intervalle des données numériques ou des dates, etc.) et les « Entité » (par example, une classe Banque est associé en quelque sorte à une entité Rue, Code Postal, etc.). 
+Dans le système de gestion des adhérents à la société d'assurance des employés de la compagnie énergétique de l'état de Goiás, le système trois couches/MVC est représenté par des classes de Vue, Contrôle, Business et Persistance. D'autres classes de support étaient aussi présentes, mais plus pour une question d'organisation que de  style d'architecture, telles que les  « Vérificateurs » (utilisées pour assurer le type des variables, intervalle des données numériques ou des dates, etc.) et les « Entités » (par example, une classe Banque est associé en quelque sorte à une entité Rue, Code Postal, etc.). 
 
-Comme l'on peut voir, ce style est composé à la fois de classes de Présentation/Vue, de Business/Logique/Modèle, de Données/Persistance et de Contrôle, ce qui assure une gestion de donnés et de développement logiciel plus rigoureux que les deux systèmes séparés : si d'un côté il y a plus d'entités qui détiennent un accès limité aux informations, et donc s'il faut écrire plus de lignes de code, de l'autre côté cela assure la modularité du programme et la maintenance du code.
+Comme l'on peut voir, ce style est composé à la fois de classes de Présentation/Vue, de Business/Logique/Modèle, de Données/Persistance et de Contrôle, ce qui assure une gestion de donnés et de développement logiciel plus rigoureux que les deux systèmes séparés : si d'un côté il y a plus d'entités qui détiennent un accès limité aux informations -- et donc s'il faut écrire plus de lignes de code --, de l'autre côté cela assure la modularité du programme et la maintenance du code.
 
 De mode général, ce flux de contrôle se passe de la façon suivante :
 
@@ -58,13 +58,13 @@ De mode général, ce flux de contrôle se passe de la façon suivante :
 \item Cet événement est capté par Vue et transmis au \textbf{Contrôleur} associé
 \item Le Contrôleur fait appel au \textbf{Business}, qui applique la logique du système selon le cas échéant
 \begin{itemize}
-\item Les \textbf{Vérificateur}s interviennent normalement entre le Contrôleur et le Business, lorsque l'utilisateur fait un action limitée par la conception de la Vue, qui n'a pas de rapport avec la logique intrinsèque du système
+\item Les \textbf{Vérificateur}s interviennent normalement entre le Contrôleur et le Business, lorsque l'utilisateur fait un action limitée par la conception de la Vue, qui n'a nécessairement pas de rapport avec la logique intrinsèque du système
 \end{itemize}
-\item Le Business appelle la \textbf{Persistance} pour consulter ou modifier la base de données du système
+\item Le Business appelle la \textbf{Persistance} pour consulter ou modifier la base de données du programme
 \item Une message de confirmation ou d'erreur est transmise dans le flux contraire jusqu'à la Vue et à l'utilisateur.
 \end{enumerate}
 
-La table \ref{flux} représente ce flux de manière schématique avec l'exemple d'un utilisateur qui veut consulter tous les clients de la base de données.
+La Table \ref{flux} représente ce flux de manière schématique avec l'exemple d'un utilisateur qui veut consulter tous les clients de la base de données.
 
 \begin{table}[ht]
 \begin{center}
@@ -72,7 +72,7 @@ La table \ref{flux} représente ce flux de manière schématique avec l'exemple 
     \hline
     \textbf{Flux de contrôle} & \textbf{Classes concernées} \\ \hline
     L'utilisateur clique sur le bouton « Afficher clients »  & \textit{Utilisateur} $\rightarrow$ Vue \\ \hline
-    La Vue appelle le Contrôleur afin d'interpréter l'événement clic & Vue $\rightarrow$ Contrôleur \\ \hline
+    La Vue appelle le Contrôleur afin d'interpréter l'événement \textit{clic} & Vue $\rightarrow$ Contrôleur \\ \hline
     Le Contrôleur fait usage du Vérificateur pour voir si toutes les champs de saisie de texte ont été bien remplis 
     	(par exemple, n'a-t-il pas mis de caractères de l'alphabet dans le champ « période de consultation » ?)
     	En cas positif, il appelle le Business ; sinon, un message d'erreur se produit et l'utilisateur réécrit les informations. 
@@ -85,7 +85,7 @@ La table \ref{flux} représente ce flux de manière schématique avec l'exemple 
     	(par example, les clients supprimés\footnotemark[1] ne seront pas affichés). 
     	La réponse de cette requête est donc renvoyé dans le flux inversé jusqu'à la Vue. 
     	& Persistance $\rightarrow \cdots \rightarrow$ Vue \\ \hline
-    La Vue organise l'information et la rend visible à l'utilisateur, sous forme de table mise en forme 
+    La Vue organise l'information et la rend visible à l'utilisateur, sous forme de présentation mise en forme 
     	& Vue $\rightarrow$ \textit{Utilisateur} \\
     \hline
     \end{tabular}

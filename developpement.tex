@@ -7,7 +7,7 @@
 	% o que os outros faziam, o que eu fazia
 % exemplo prático na criacao de alguma tela (das que geram relatorio).
 
-Le deuxième mois de mon stage a été concentré sur le développement du système de gestion d'adhérents de CELGMED (Figure \ref{pp}). J'étais charge de la conception et création de plusieurs entités Java et fenêtres graphiques Flex, et par la liaison avec les bases de données SQL Server déjà existantes.
+Le deuxième mois de mon stage a été concentré sur le développement du système de gestion d'adhérents de CELGMED (Figure \ref{pp}). J'étais chargé de la conception et création de plusieurs entités Java et fenêtres graphiques Flex, et par la liaison avec les bases de données SQL Server déjà existantes.
 
 \begin{figure}[h]
 \begin{center}
@@ -33,19 +33,19 @@ De manière générale, afin de créer les fenêtres graphiques du système de g
 \begin{figure}[h]
 \begin{center}
     \includegraphics[scale=0.39]{img/db}
-    \caption{Base de données relationnelles SQL Server}
+    \caption{Base de données relationnelle SQL Server}
 	\label{db}
 \end{center}
 \end{figure}
 
-Encore une fois, ces phases peuvent être mieux expliqués avec un example pratique que j'ai dû exécuter. Supposons la création d'une fenêtre graphique de demande de radiothérapie par un client de la mutuelle de santé CELGMED (Figure \ref{pp-radio}). Ces étapes deviennent donc :
+Encore une fois, ces phases peuvent être mieux expliquées avec un example pratique que j'ai dû exécuter. Supposons la création d'une fenêtre graphique de demande de radiothérapie par un client de la mutuelle de santé CELGMED (Figure \ref{pp-radio}). Ces étapes deviennent donc :
 
 \begin{enumerate}
 \item Création de la fenêtre graphique avec l'aide de Flash Builder. Prise en compte des entités qui seraient utilisées : Bénéficiaire (la personne qui a demandé la radiothérapie), Médecin responsable, Maladies diagnostiquées, etc. L'élaboration de cette fenêtre de prototype était très vite, car on prenait souvent une autre fenêtre similaire comme modèle.
 \item Vérification des tables à être utilisées : \texttt{celgmed.Beneficiaire}, \texttt{celgmed} \texttt{.Medecin}, \texttt{celgmed.Maladie}, etc.
 \item Création des entités correspondantes aux tables : \underline{Ebeneficiaire}, \underline{Emedecin}, \underline{Emaladie}, ainsi que celles correspondantes à la radiothérapie proprement dite, \underline{Cradiotherapie}, \underline{Bradiotherapie}, \underline{Pradiotherapie}. 
-\item Codage du flux de contrôle. Un clic dans le bouton « Sauvegarder » faisait que la vue appelle le Cradiotherapie, qui à son tour mettait en place le Bradiotherapie pour vérifier la logique associé à une sauvegarde de données, qui ensuite demandait que la Pradiotherapie fasse les altérations dans les tables avec des commandes SQL : ``\texttt{UPDATE \textit{celgmed.Beneficiaire} SET \textit{VISITE\_MEDICALE}=\textit{1} WHERE \textit{NOM\_BENEFICIAIRE}=`\textit{Pierre \\ Dubois}'}''. Le message d'erreur ou succès retournait à la fenêtre et l'utilisateur voyait le résultat de sa commande : ``Bénéficiaire mis à jour''. Celle-ci était l'étape la plus fastidieuse, car sa sous-division était beaucoup difficile ; la classe P nécessitait de la B, qui nécessitait de la C, qui à son tour était très lié à la V, et donc les fenêtres soit étaient finies, soit ne l'étaient pas.
-\item Conception du rapport PDF à être généré. Il s'agissait de reproduire les mêmes éléments de la fenêtre graphique.
+\item Codage du flux de contrôle. Un clic dans le bouton « Sauvegarder » faisait que la vue appelle le Cradiotherapie, qui à son tour mettait en place le Bradiotherapie pour vérifier la logique associé à une sauvegarde de données, qui ensuite demandait que la Pradiotherapie fasse les altérations dans les tables avec des commandes SQL : ``\texttt{UPDATE \textit{celgmed.Beneficiaire} SET \textit{VISITE\_MEDICALE}=\textit{1} WHERE \textit{NOM\_BENEFICIAIRE}=`\textit{Pierre \\ Dubois}'}''. Le message d'erreur ou succès retournait à la fenêtre et l'utilisateur voyait le résultat de sa commande : ``Bénéficiaire mis à jour''. Celle-ci était l'étape la plus fastidieuse, car sa sous-division était beaucoup difficile ; la classe P nécessitait de la B, qui nécessitait de la C, qui à son tour était très lié à la V.
+\item Conception du rapport PDF à être généré. Il s'agissait de reproduire les mêmes éléments de la fenêtre graphique sous le format JasperReport.
 \item Vérification du code par le tuteur.
 \end{enumerate}
 
@@ -57,4 +57,4 @@ Encore une fois, ces phases peuvent être mieux expliqués avec un example prati
 \end{center}
 \end{figure}
 
-Le développement de fenêtres plus élaborées, comme celle de la radiothérapie, prenait environ une semaine pour leur réalisation, alors que les fenêtres plus élémentaires, qui ne touchaient à une seule table de la base de données, comme dans l'enregistrement d'une Rue ou d'une Ville, comptaient une journée. Dans ce rythme, j'ai pu assister à la création de plus d'une dizaine de fenêtres complètes au cours du deuxième mois de mon stage.
+Le développement de fenêtres plus élaborées, comme celle de la radiothérapie, prenait environ une semaine pour leur réalisation, alors que les fenêtres plus élémentaires, qui ne touchaient qu'à une seule table de la base de données, comme dans l'enregistrement d'une Rue ou d'une Ville, comptaient une journée. Dans ce rythme, j'ai pu assister à la création de plus d'une dizaine de fenêtres complètes au cours du deuxième mois de mon stage.
